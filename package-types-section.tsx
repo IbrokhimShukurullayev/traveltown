@@ -102,7 +102,7 @@ export default function PackageTypesSection() {
               <div className="bg-white p-6">
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-500 uppercase">
-                    Popular Destinations
+                    Mashhur manzillar
                   </h4>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {packageType.destinations.map((destination, index) => (

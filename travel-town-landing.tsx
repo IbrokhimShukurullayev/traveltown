@@ -57,19 +57,19 @@ export default function TravelTownLanding() {
               href="#"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              Home
+              Bosh sahifa
             </Link>
             <Link
               href="#about"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              About
+              Biz haqimzda
             </Link>
             <Link
               href="#packages"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              Packages
+              Paketlar
             </Link>
             {/* <Link
               href="#gallery"
@@ -81,11 +81,11 @@ export default function TravelTownLanding() {
               href="#contact"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              Contact
+              Aloqa
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Button className="hidden md:flex">Book Now</Button>
+            <Button className="hidden md:flex">Hozir band qiling</Button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
@@ -125,7 +125,7 @@ export default function TravelTownLanding() {
                   >
                     Contact
                   </Link>
-                  <Button>Book Now</Button>
+                  <Button>Hozir buyurtma bering</Button>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -150,11 +150,11 @@ export default function TravelTownLanding() {
                   Travel Town
                 </div>
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  Discover Your Perfect Getaway!
+                  Yaxshi dam olish joyingizni kashf qiling!
                 </h1>
                 <p className="max-w-[700px] text-lg md:text-xl">
-                  Experience comfort, luxury, and unforgettable adventures with
-                  our premium travel packages.
+                  Qulaylik, hashamat va unutilmas sarguzashtlarni bizning
+                  premium sayohat paketlarimiz bilan his eting.
                 </p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function TravelTownLanding() {
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Your Destination
+                    Sizning manzilingiz
                   </label>
                   <Input
                     placeholder="Where do you want to go?"
@@ -173,7 +173,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Number of People
+                    Odamlar soni
                   </label>
                   <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                     <option value="1">1</option>
@@ -185,7 +185,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Country
+                    Mamlakat
                   </label>
                   <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                     <option value="maldives">Maldives</option>
@@ -197,7 +197,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Phone Number
+                    Telefon raqami
                   </label>
                   <Input
                     type="tel"
@@ -207,7 +207,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="flex items-end">
                   <Button className="w-full bg-cyan-500 mx-auto text-center  h-10">
-                    Search Packages
+                    Paketlarni qidirish
                   </Button>
                 </div>
               </div>
@@ -232,23 +232,26 @@ export default function TravelTownLanding() {
               </div>
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  About Travel Town
+                  Travel Town haqida
                 </h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Travel Town was founded in 2010 with a simple mission: to make
-                  travel accessible, enjoyable, and memorable for everyone. Our
-                  team of experienced travel enthusiasts is dedicated to
-                  crafting the perfect getaway for you.
+                  Travel Town 2010-yilda oddiy bir missiya bilan tashkil
+                  etilgan: sayohatni har bir kishi uchun qulay, yoqimli va
+                  unutilmas qilish. Bizning tajribali sayohat ishqibozlari
+                  jamoamiz siz uchun mukammal dam olish joyini yaratishga
+                  bag'ishlangan.
                 </p>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Whether you're looking for a relaxing beach vacation, an
-                  adventurous trek through mountains, or a cultural immersion in
-                  a historic city, we have the expertise and resources to make
-                  it happen.
+                  Agar siz tinchlantiruvchi plyajdam olish, tog'lar bo'ylab
+                  sarguzashtli sayohat yoki tarixiy shaharda madaniyatga
+                  sho'ng'ish izlayotgan bo'lsangiz, bizda bunga erishish uchun
+                  zarur bo'lgan tajriba va resurslar mavjud.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button>Our Story</Button>
-                  <Button variant="outline">Meet Our Team</Button>
+                  <Button>Bizning hikoyamiz</Button>
+                  <Button variant="outline">
+                    Bizning jamoamiz bilan tanishing
+                  </Button>
                 </div>
               </div>
             </div>
@@ -263,11 +266,11 @@ export default function TravelTownLanding() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Our Travel Packages
+                  Bizning sayohat paketlarimiz
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Choose from our carefully curated travel packages designed to
-                  suit every preference and budget.
+                  Har bir did va byudjetga mos keladigan, diqqat bilan tanlangan
+                  sayohat paketlarimizdan tanlang.
                 </p>
               </div>
             </div>
@@ -284,7 +287,7 @@ export default function TravelTownLanding() {
                   </div>
                   <CardTitle className="mt-4">Beach Getaway</CardTitle>
                   <CardDescription>
-                    Perfect for relaxation and sun lovers
+                    Tinchlanish va quyoshni sevuvchilar uchun ideal
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -315,10 +318,12 @@ export default function TravelTownLanding() {
                     </li>
                   </ul>
                   <div className="mt-4 text-2xl font-bold">$350</div>
-                  <div className="text-sm text-gray-500">per person</div>
+                  <div className="text-sm text-gray-500">
+                    Har bir kishi uchun
+                  </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Book Now</Button>
+                  <Button className="w-full">Hozir buyurtma bering</Button>
                 </CardFooter>
               </Card>
               <Card>
@@ -331,9 +336,9 @@ export default function TravelTownLanding() {
                       className="object-cover transition-transform hover:scale-105"
                     />
                   </div>
-                  <CardTitle className="mt-4">Mountain Adventure</CardTitle>
+                  <CardTitle className="mt-4">Tog' sarguzashti</CardTitle>
                   <CardDescription>
-                    For thrill-seekers and nature enthusiasts
+                    Hayajon izlovchilar va tabiatni sevuvchilar uchun
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -364,10 +369,12 @@ export default function TravelTownLanding() {
                     </li>
                   </ul>
                   <div className="mt-4 text-2xl font-bold">$300</div>
-                  <div className="text-sm text-gray-500">per person</div>
+                  <div className="text-sm text-gray-500">
+                    Har bir kishi uchun
+                  </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Book Now</Button>
+                  <Button className="w-full">Hozir buyurtma bering</Button>
                 </CardFooter>
               </Card>
               <Card>
@@ -380,9 +387,9 @@ export default function TravelTownLanding() {
                       className="object-cover transition-transform hover:scale-105"
                     />
                   </div>
-                  <CardTitle className="mt-4">Cultural City Tour</CardTitle>
+                  <CardTitle className="mt-4">Madaniy shahar turlari</CardTitle>
                   <CardDescription>
-                    Immerse yourself in history and culture
+                    Tarix va madaniyatga sho'ng'ish
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -413,10 +420,12 @@ export default function TravelTownLanding() {
                     </li>
                   </ul>
                   <div className="mt-4 text-2xl font-bold">$340</div>
-                  <div className="text-sm text-gray-500">per person</div>
+                  <div className="text-sm text-gray-500">
+                    Har bir kishi uchun
+                  </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Book Now</Button>
+                  <Button className="w-full">Hozir buyurtma bering</Button>
                 </CardFooter>
               </Card>
             </div>
@@ -430,11 +439,12 @@ export default function TravelTownLanding() {
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Contact Us
+                  Biz bilan bog'laning
                 </h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Have questions or ready to plan your next adventure? Get in
-                  touch with our travel experts.
+                  Savollaringiz bormi yoki keyingi sarguzashtingizni
+                  rejalashtirishga tayyormisiz? Sayohat bo'yicha
+                  mutaxassislarimiz bilan bog'laning.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
@@ -467,7 +477,7 @@ export default function TravelTownLanding() {
               </div>
               <div className="space-y-4">
                 <div className="rounded-lg border bg-background p-6 shadow-sm">
-                  <h3 className="text-xl font-bold">Send Us a Message</h3>
+                  <h3 className="text-xl font-bold">Bizga xabar yuboring</h3>
                   <form className="mt-4 space-y-4">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
@@ -490,7 +500,7 @@ export default function TravelTownLanding() {
                       />
                     </div>
                     <Button type="submit" className="w-full">
-                      Send Message
+                      Bizga xabar yuboring
                     </Button>
                   </form>
                 </div>
@@ -505,8 +515,8 @@ export default function TravelTownLanding() {
             <div className="space-y-4">
               <h3 className="text-xl font-bold">Travel Town</h3>
               <p className="text-gray-400">
-                Making your travel dreams come true since 2010. Your journey
-                begins with us.
+                2010-yildan beri sayohat orzularingizni haqiqatga aylantiramiz.
+                Sayohatingiz biz bilan boshlanadi.
               </p>
             </div>
             <div className="space-y-4">
@@ -514,7 +524,7 @@ export default function TravelTownLanding() {
               <ul className="space-y-2">
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
-                    Home
+                    Bosh sahifa
                   </Link>
                 </li>
                 <li>
@@ -522,7 +532,7 @@ export default function TravelTownLanding() {
                     href="#about"
                     className="text-gray-400 hover:text-white"
                   >
-                    About
+                    Biz haqimizda
                   </Link>
                 </li>
                 <li>
@@ -530,29 +540,29 @@ export default function TravelTownLanding() {
                     href="#packages"
                     className="text-gray-400 hover:text-white"
                   >
-                    Packages
+                    Paketlar
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="#gallery"
                     className="text-gray-400 hover:text-white"
                   >
                     Gallery
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="#contact"
                     className="text-gray-400 hover:text-white"
                   >
-                    Contact
+                    Boglanish
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Popular Destinations</h3>
+              <h3 className="text-lg font-semibold">Mashhur manzillar</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
@@ -577,9 +587,10 @@ export default function TravelTownLanding() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Newsletter</h3>
+              <h3 className="text-lg font-semibold">Yangiliklar byulleteni</h3>
               <p className="text-gray-400">
-                Subscribe to get special offers and travel tips.
+                Maxsus takliflar va sayohat bo'yicha maslahatlar olish uchun
+                obuna bo'ling.
               </p>
               <form className="flex gap-2">
                 <Input
@@ -587,7 +598,7 @@ export default function TravelTownLanding() {
                   className="bg-gray-800 border-gray-700"
                 />
                 <Button type="submit" className="shrink-0">
-                  Subscribe
+                  Obuna bo'ling
                 </Button>
               </form>
             </div>

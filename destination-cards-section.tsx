@@ -59,11 +59,11 @@ export default function DestinationCardsSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Popular Destinations
+            Mashhur manzillar
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Explore our most sought-after destinations loved by travelers
-            worldwide
+            Butun dunyo bo'ylab sayohatchilar tomonidan sevilgan eng mashhur
+            manzillarimizni kashf eting.
           </p>
         </div>
 
