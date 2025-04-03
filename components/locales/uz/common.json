@@ -1,0 +1,15 @@
+{
+  "header":{
+  "home": "Bosh sahifa",
+  "about us": "Biz haqimzda",
+  "packages": "Paketlar",
+  "contact": "Bog‘lanish",
+  "order": "Hozir band qiling"
+},
+"hero": {
+  "home": "Biznesingiz uchun professional buxgalteriya xizmatlari",
+  "home1": "Xizmatlarimiz",
+  "home2": "Biz bilan bog‘laning"
+}
+}
+

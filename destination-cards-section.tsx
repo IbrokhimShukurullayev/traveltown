@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star, MapPin } from "lucide-react";
 import img1 from "./public/images.jpg";
-import img2 from "./public/images (1).jpg";
+import img2 from "./public/99.jpg";
 import img3 from "./public/images3.webp";
 import img4 from "./public/360_F_304881889_yJ1S3butl9gVs0kMptYTU2N1EVmEJbz8.jpg";
-import img5 from "./public/images.jpg";
-import img6 from "./public/images (1).jpg";
+import img5 from "./public/Karma-Beach-Club_Karma-Beach-Bali-.webp";
+import img6 from "./public/qMKcVJ_1547347533_Kyoto-Gardens.jpg";
+import img7 from "./public/bsr-travel-hero..jpg";
 
 export default function DestinationCardsSection() {
   const destinations = [
@@ -14,7 +15,7 @@ export default function DestinationCardsSection() {
       id: 1,
       name: "Alpine Lake",
       location: "Switzerland",
-      image: img1,
+      image: img7,
       rating: 4.5,
     },
     {
@@ -90,17 +91,17 @@ export default function DestinationCardsSection() {
                 </div>
 
                 {/* Location Pin */}
-                <div className="absolute top-4 right-4 flex items-center justify-center rounded-full bg-red-500 p-2 text-white">
+                <div
+                  className="absolute top-4 right-4 flex items-center gap-1 justify-center rounded-full  p-2 text-white"
+                  style={{ backgroundColor: "rgba(242, 242, 247, 0.4)" }}
+                >
                   <MapPin className="h-4 w-4" />
+                  <span className="text-sm">{destination.location}</span>
                 </div>
 
                 {/* Destination Info */}
                 <div className="absolute bottom-0 left-0 w-full p-4 text-white">
                   <h3 className="text-xl font-bold">{destination.name}</h3>
-                  <div className="flex items-center gap-1 mt-1">
-                    <MapPin className="h-4 w-4" />
-                    <span className="text-sm">{destination.location}</span>
-                  </div>
                 </div>
               </div>
             </Link>

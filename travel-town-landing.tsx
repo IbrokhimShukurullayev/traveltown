@@ -29,15 +29,16 @@ import DestinationCardsSection from "./destination-cards-section";
 // import TravelGallerySection from "./travel-gallery-section";
 import about from "./public/360_F_304881889_yJ1S3butl9gVs0kMptYTU2N1EVmEJbz8.jpg";
 import img2 from "./public/images (1).jpg";
-import img3 from "./public/images.jpg";
+import img3 from "./public/qMKcVJ_1547347533_Kyoto-Gardens.jpg";
 import img4 from "./public/images3.webp";
 import logo from "./public/logo.png";
+import img5 from "./public/bsr-travel-hero..jpg";
 
 export default function TravelTownLanding() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
-        <div className="container mx-auto flex h-16 items-center justify-between py-4">
+        <div className="container mx-auto flex h-16 items-center justify-between py-4 px-4  md:px-0">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <span className="w-[150px] h-auto relative">
@@ -45,29 +46,32 @@ export default function TravelTownLanding() {
                   src={logo}
                   alt="Tropical destination with overwater bungalows"
                   width={150}
-                  height={50} // Balandlikni o‘zingizga mos ravishda o‘zgartiring
+                  height={50}
                   className="object-contain"
                   priority
                 />
               </span>
             </Link>
           </div>
-          <nav className="hidden md:flex gap-6">
+          <nav className="hidden md:flex gap-16">
             <Link
               href="#"
               className="text-sm font-medium transition-colors hover:text-primary"
+              style={{ fontWeight: "500", fontSize: "18px" }}
             >
               Bosh sahifa
             </Link>
             <Link
               href="#about"
               className="text-sm font-medium transition-colors hover:text-primary"
+              style={{ fontWeight: "500", fontSize: "18px" }}
             >
               Biz haqimzda
             </Link>
             <Link
               href="#packages"
               className="text-sm font-medium transition-colors hover:text-primary"
+              style={{ fontWeight: "500", fontSize: "18px" }}
             >
               Paketlar
             </Link>
@@ -80,11 +84,17 @@ export default function TravelTownLanding() {
             <Link
               href="#contact"
               className="text-sm font-medium transition-colors hover:text-primary"
+              style={{ fontWeight: "500", fontSize: "18px" }}
             >
               Aloqa
             </Link>
           </nav>
           <div className="flex items-center gap-4">
+            <select className="text-gray-600 border border-gray-300 rounded-lg p-2  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="uz">O'zbek</option>
+              <option value="en">English</option>
+              <option value="ru">Русский</option>
+            </select>
             <Button className="hidden md:flex">Hozir band qiling</Button>
             <Sheet>
               <SheetTrigger asChild>
@@ -98,34 +108,44 @@ export default function TravelTownLanding() {
                   <Link
                     href="#"
                     className="text-sm font-medium transition-colors hover:text-primary"
+                    style={{ fontWeight: "700" }}
                   >
                     Home
                   </Link>
                   <Link
                     href="#about"
                     className="text-sm font-medium transition-colors hover:text-primary"
+                    style={{ fontWeight: "500", fontSize: "18px" }}
                   >
                     About
                   </Link>
                   <Link
                     href="#packages"
                     className="text-sm font-medium transition-colors hover:text-primary"
+                    style={{ fontWeight: "500", fontSize: "18px" }}
                   >
                     Packages
                   </Link>
                   <Link
                     href="#gallery"
                     className="text-sm font-medium transition-colors hover:text-primary"
+                    style={{ fontWeight: "500", fontSize: "18px" }}
                   >
                     Gallery
                   </Link>
                   <Link
                     href="#contact"
                     className="text-sm font-medium transition-colors hover:text-primary"
+                    style={{ fontWeight: "500", fontSize: "18px" }}
                   >
                     Contact
                   </Link>
                   <Button>Hozir buyurtma bering</Button>
+                  <select className="text-gray-600 border border-gray-300 rounded-lg p-2  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="uz">O'zbek</option>
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                  </select>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -133,7 +153,7 @@ export default function TravelTownLanding() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full h-screen relative">
+        <section className="w-full relative">
           <div className="absolute inset-0 z-0">
             <Image
               src={img1}
@@ -144,7 +164,10 @@ export default function TravelTownLanding() {
             />
           </div>
           <div className="container mx-auto relative z-10 h-full flex flex-col justify-center px-4 md:px-6">
-            <div className="flex flex-col items-start space-y-4 text-white max-w-3xl">
+            <div
+              className="banner flex flex-col  items-start space-y-4 pt-[70px] pb-[110px] text-white max-w-3xl  md:pt-[160px] md:pb-[300px]"
+              // style={{ padding: "70px 0 110px 0" }}
+            >
               <div className="space-y-2">
                 <div className="inline-block bg-cyan-500 px-4 py-2 text-2xl font-bold rounded-md">
                   Travel Town
@@ -160,7 +183,7 @@ export default function TravelTownLanding() {
             </div>
 
             {/* Search form overlay */}
-            <div className="absolute bottom-12 left-0 right-0 mx-auto w-full max-w-6xl bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg z-20">
+            <div className="relative bottom-12 left-0 right-0 mx-auto w-full max-w-6xl bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg z-20  md:absolute">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium text-gray-700">
@@ -217,7 +240,7 @@ export default function TravelTownLanding() {
         {/* Destination Cards Section */}
         <DestinationCardsSection />
         {/* Package Types Section */}
-        <PackageTypesSection />
+        {/* <PackageTypesSection />  */}
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
@@ -279,7 +302,7 @@ export default function TravelTownLanding() {
                 <CardHeader>
                   <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
                     <Image
-                      src={img2}
+                      src={img5}
                       alt="Beach destination"
                       fill
                       className="object-cover transition-transform hover:scale-105"

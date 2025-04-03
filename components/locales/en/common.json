@@ -1,0 +1,14 @@
+{
+  "header":{
+  "home": "Home",
+  "about us": "About us",
+  "packages": "Packages",
+  "contact": "Contact",
+  "order": "Order now"
+},
+"hero": {
+  "home": "Профессиональные бухгалтерские услуги для вашего бизнеса.",
+  "home1": "Наши услуги",
+  "home2": "Свяжитесь с нами"
+}
+}
