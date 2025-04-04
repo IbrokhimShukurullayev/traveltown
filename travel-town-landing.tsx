@@ -187,12 +187,9 @@ export default function TravelTownLanding() {
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Sizning manzilingiz
+                    Ismingiz
                   </label>
-                  <Input
-                    placeholder="Where do you want to go?"
-                    className="w-full"
-                  />
+                  <Input placeholder="Ismingizni kiriting" className="w-full" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
@@ -272,9 +269,6 @@ export default function TravelTownLanding() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button>Bizning hikoyamiz</Button>
-                  <Button variant="outline">
-                    Bizning jamoamiz bilan tanishing
-                  </Button>
                 </div>
               </div>
             </div>
@@ -615,15 +609,6 @@ export default function TravelTownLanding() {
                 Maxsus takliflar va sayohat bo'yicha maslahatlar olish uchun
                 obuna bo'ling.
               </p>
-              <form className="flex gap-2">
-                <Input
-                  placeholder="Your Email"
-                  className="bg-gray-800 border-gray-700"
-                />
-                <Button type="submit" className="shrink-0">
-                  Obuna bo'ling
-                </Button>
-              </form>
             </div>
           </div>
           <div className="mt-8 border-t border-gray-800 pt-8 text-center text-gray-400">
