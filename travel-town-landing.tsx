@@ -230,7 +230,7 @@ export default function TravelTownLanding() {
                   </label>
                   <Input
                     type="tel"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+99899000000"
                     className="w-full"
                   />
                 </div>
@@ -532,10 +532,27 @@ export default function TravelTownLanding() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  {/* <Button size="icon" variant="outline">
-                    <Facebook className="h-5 w-5" />
+                  <Button
+                    size="icon"
+                    onClick={() =>
+                      window.open("https://t.me/Traveltownuz", "_blank")
+                    }
+                    variant="outline"
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      viewBox="0 0 240 240"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="120" cy="120" r="120" fill="#6c6767" />
+                      <path
+                        d="M179.7 76.7 158 169.8c-1.5 6.4-5.6 8-11.3 5l-31.2-23.1-15 14.4c-1.7 1.7-3.1 3.1-6.3 3.1l2.2-31.3 56.9-51.4c2.5-2.2-.6-3.5-3.9-1.3L82.5 129.3 52.1 120c-6.2-1.9-6.3-6.2 1.3-9.1l121.4-46.9c5.7-2.1 10.7 1.4 8.9 8.7Z"
+                        fill="#fff"
+                      />
+                    </svg>
                     <span className="sr-only">Facebook</span>
-                  </Button> */}
+                  </Button>
                   <Button
                     size="icon"
                     onClick={() =>
