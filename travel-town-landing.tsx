@@ -9,8 +9,11 @@ import {
   Instagram,
   Menu,
 } from "lucide-react";
-
+import FAQSection from "./faq-section";
 import img1 from "./public/bgd.png";
+
+import { useLanguage } from "./contexts/language-context";
+import { getTranslation } from "./translations";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -26,15 +29,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import PackageTypesSection from "./package-types-section";
 import DestinationCardsSection from "./destination-cards-section";
+import LanguageSelector from "./components/language-selector";
 // import TravelGallerySection from "./travel-gallery-section";
 import about from "./public/360_F_304881889_yJ1S3butl9gVs0kMptYTU2N1EVmEJbz8.jpg";
 import img2 from "./public/images (1).jpg";
-import img3 from "./public/qMKcVJ_1547347533_Kyoto-Gardens.jpg";
-import img4 from "./public/images3.webp";
+import img3 from "./public/tailnad3.avif";
+import img4 from "./public/turkey5.jpg";
 import logo from "./public/logo.png";
-import img5 from "./public/bsr-travel-hero..jpg";
+import img5 from "./public/dubai3.webp";
 
 export default function TravelTownLanding() {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b bg-background">
@@ -53,49 +59,53 @@ export default function TravelTownLanding() {
               </span>
             </Link>
           </div>
-          <nav className="hidden md:flex gap-16">
+          <nav className="hidden md:flex gap-6">
             <Link
               href="#"
               className="text-sm font-medium transition-colors hover:text-primary"
               style={{ fontWeight: "500", fontSize: "18px" }}
             >
-              Bosh sahifa
+              {t.home}
             </Link>
             <Link
               href="#about"
               className="text-sm font-medium transition-colors hover:text-primary"
               style={{ fontWeight: "500", fontSize: "18px" }}
             >
-              Biz haqimzda
+              {t.about}
             </Link>
             <Link
               href="#packages"
               className="text-sm font-medium transition-colors hover:text-primary"
               style={{ fontWeight: "500", fontSize: "18px" }}
             >
-              Paketlar
+              {t.packages}
             </Link>
             {/* <Link
               href="#gallery"
               className="text-sm font-medium transition-colors hover:text-primary"
+              style={{ fontWeight: "500", fontSize: "18px" }}
             >
-              Gallery
+              {t.gallery}
             </Link> */}
+            <Link
+              href="#faq"
+              className="text-sm font-medium transition-colors hover:text-primary"
+              style={{ fontWeight: "500", fontSize: "18px" }}
+            >
+              {t.faq}
+            </Link>
             <Link
               href="#contact"
               className="text-sm font-medium transition-colors hover:text-primary"
               style={{ fontWeight: "500", fontSize: "18px" }}
             >
-              Aloqa
+              {t.contact}
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <select className="text-gray-600 border border-gray-300 rounded-lg p-2  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="uz">O'zbek</option>
-              <option value="en">English</option>
-              <option value="ru">Русский</option>
-            </select>
-            <Button className="hidden md:flex">Hozir band qiling</Button>
+            <LanguageSelector />
+            <Button className="hidden md:flex">{t.bookNow}</Button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
@@ -108,7 +118,7 @@ export default function TravelTownLanding() {
                   <Link
                     href="#"
                     className="text-sm font-medium transition-colors hover:text-primary"
-                    style={{ fontWeight: "700" }}
+                    style={{ fontWeight: "500", fontSize: "18px" }}
                   >
                     Home
                   </Link>
@@ -173,11 +183,10 @@ export default function TravelTownLanding() {
                   Travel Town
                 </div>
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  Yaxshi dam olish joyingizni kashf qiling!
+                  {t.heroTitle}
                 </h1>
                 <p className="max-w-[700px] text-lg md:text-xl">
-                  Qulaylik, hashamat va unutilmas sarguzashtlarni bizning
-                  premium sayohat paketlarimiz bilan his eting.
+                  {t.heroSubtitle}
                 </p>
               </div>
             </div>
@@ -187,13 +196,13 @@ export default function TravelTownLanding() {
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Ismingiz
+                    {t.yourDestination}
                   </label>
-                  <Input placeholder="Ismingizni kiriting" className="w-full" />
+                  <Input placeholder={t.yourDestination} className="w-full" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Odamlar soni
+                    {t.numberOfPeople}
                   </label>
                   <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                     <option value="1">1</option>
@@ -205,7 +214,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Mamlakat
+                    {t.country}
                   </label>
                   <select className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
                     <option value="maldives">Maldives</option>
@@ -217,7 +226,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-700">
-                    Telefon raqami
+                    {t.phoneNumber}
                   </label>
                   <Input
                     type="tel"
@@ -227,7 +236,7 @@ export default function TravelTownLanding() {
                 </div>
                 <div className="flex items-end">
                   <Button className="w-full bg-cyan-500 mx-auto text-center  h-10">
-                    Paketlarni qidirish
+                    {t.searchPackages}
                   </Button>
                 </div>
               </div>
@@ -252,23 +261,16 @@ export default function TravelTownLanding() {
               </div>
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Travel Town haqida
+                  {t.aboutTitle}
                 </h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Travel Town 2010-yilda oddiy bir missiya bilan tashkil
-                  etilgan: sayohatni har bir kishi uchun qulay, yoqimli va
-                  unutilmas qilish. Bizning tajribali sayohat ishqibozlari
-                  jamoamiz siz uchun mukammal dam olish joyini yaratishga
-                  bag'ishlangan.
+                  {t.aboutParagraph1}
                 </p>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Agar siz tinchlantiruvchi plyajdam olish, tog'lar bo'ylab
-                  sarguzashtli sayohat yoki tarixiy shaharda madaniyatga
-                  sho'ng'ish izlayotgan bo'lsangiz, bizda bunga erishish uchun
-                  zarur bo'lgan tajriba va resurslar mavjud.
+                  {t.aboutParagraph2}
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button>Bizning hikoyamiz</Button>
+                  <Button>{t.ourStory}</Button>
                 </div>
               </div>
             </div>
@@ -302,7 +304,7 @@ export default function TravelTownLanding() {
                       className="object-cover transition-transform hover:scale-105"
                     />
                   </div>
-                  <CardTitle className="mt-4">Beach Getaway</CardTitle>
+                  <CardTitle className="mt-4">Dubai</CardTitle>
                   <CardDescription>
                     Tinchlanish va quyoshni sevuvchilar uchun ideal
                   </CardDescription>
@@ -334,7 +336,7 @@ export default function TravelTownLanding() {
                       <span>24/7 aloqa</span>
                     </li>
                   </ul>
-                  <div className="mt-4 text-2xl font-bold">$350</div>
+                  <div className="mt-4 text-2xl font-bold">$380</div>
                   <div className="text-sm text-gray-500">
                     Har bir kishi uchun
                   </div>
@@ -353,7 +355,7 @@ export default function TravelTownLanding() {
                       className="object-cover transition-transform hover:scale-105"
                     />
                   </div>
-                  <CardTitle className="mt-4">Tog' sarguzashti</CardTitle>
+                  <CardTitle className="mt-4">Thailand</CardTitle>
                   <CardDescription>
                     Hayajon izlovchilar va tabiatni sevuvchilar uchun
                   </CardDescription>
@@ -385,7 +387,7 @@ export default function TravelTownLanding() {
                       <span>24/7 aloqa</span>
                     </li>
                   </ul>
-                  <div className="mt-4 text-2xl font-bold">$300</div>
+                  <div className="mt-4 text-2xl font-bold">$320</div>
                   <div className="text-sm text-gray-500">
                     Har bir kishi uchun
                   </div>
@@ -404,7 +406,7 @@ export default function TravelTownLanding() {
                       className="object-cover transition-transform hover:scale-105"
                     />
                   </div>
-                  <CardTitle className="mt-4">Madaniy shahar turlari</CardTitle>
+                  <CardTitle className="mt-4">Turkey</CardTitle>
                   <CardDescription>
                     Tarix va madaniyatga sho'ng'ish
                   </CardDescription>
@@ -436,7 +438,7 @@ export default function TravelTownLanding() {
                       <span>24/7 aloqa</span>
                     </li>
                   </ul>
-                  <div className="mt-4 text-2xl font-bold">$340</div>
+                  <div className="mt-4 text-2xl font-bold">$420</div>
                   <div className="text-sm text-gray-500">
                     Har bir kishi uchun
                   </div>
@@ -445,8 +447,62 @@ export default function TravelTownLanding() {
                   <Button className="w-full">Hozir buyurtma bering</Button>
                 </CardFooter>
               </Card>
+              {/* <Card>
+                <CardHeader>
+                  <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                    <Image
+                      src={img4}
+                      alt="City exploration"
+                      fill
+                      className="object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <CardTitle className="mt-4">Turkey</CardTitle>
+                  <CardDescription>
+                    Tarix va madaniyatga sho'ng'ish
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      <span>Aviachiptalar</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      <span>Tibbiy sug'urta</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      <span>Shinam otel</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      <span>Nonushta</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      <span>Tayyor programma</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      <span>24/7 aloqa</span>
+                    </li>
+                  </ul>
+                  <div className="mt-4 text-2xl font-bold">$420</div>
+                  <div className="text-sm text-gray-500">
+                    Har bir kishi uchun
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full">Hozir buyurtma bering</Button>
+                </CardFooter>
+              </Card> */}
             </div>
           </div>
+        </section>
+        <section id="faq">
+          <FAQSection />
         </section>
         <section
           id="contact"
@@ -456,12 +512,10 @@ export default function TravelTownLanding() {
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Biz bilan bog'laning
+                  {t.contactTitle}
                 </h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Savollaringiz bormi yoki keyingi sarguzashtingizni
-                  rejalashtirishga tayyormisiz? Sayohat bo'yicha
-                  mutaxassislarimiz bilan bog'laning.
+                  {t.contactSubtitle}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
@@ -470,54 +524,65 @@ export default function TravelTownLanding() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>(123) 456-7890</span>
+                    <span>+998 99 292-11-11</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
-                    <span>info@traveltown.com</span>
+                    <span>info@travel_town.com</span>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button size="icon" variant="outline">
+                  {/* <Button size="icon" variant="outline">
                     <Facebook className="h-5 w-5" />
                     <span className="sr-only">Facebook</span>
-                  </Button>
-                  <Button size="icon" variant="outline">
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
-                  </Button>
-                  <Button size="icon" variant="outline">
+                  </Button> */}
+                  <Button
+                    size="icon"
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/traveltownuz",
+                        "_blank"
+                      )
+                    }
+                    variant="outline"
+                  >
                     <Instagram className="h-5 w-5" />
-                    <span className="sr-only">Instagram</span>
+                    <a
+                      href="https://www.instagram.com/traveltownuz"
+                      target="_blank"
+                      className="sr-only"
+                    >
+                      Instagram
+                    </a>
                   </Button>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="rounded-lg border bg-background p-6 shadow-sm">
-                  <h3 className="text-xl font-bold">Bizga xabar yuboring</h3>
+                  <h3 className="text-xl font-bold">{t.sendMessage}</h3>
                   <form className="mt-4 space-y-4">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
-                        <Input placeholder="First Name" />
+                        <Input placeholder={t.firstName} />
                       </div>
                       <div className="space-y-2">
-                        <Input placeholder="Last Name" />
+                        <Input placeholder={t.lastName} />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Input type="email" placeholder="Email" />
+                      <Input type="email" placeholder={t.email} />
                     </div>
                     <div className="space-y-2">
-                      <Input placeholder="Subject" />
+                      <Input placeholder={t.subject} />
                     </div>
                     <div className="space-y-2">
                       <Textarea
-                        placeholder="Your Message"
+                        placeholder={t.yourMessage}
                         className="min-h-[120px]"
                       />
                     </div>
                     <Button type="submit" className="w-full">
-                      Bizga xabar yuboring
+                      {t.sendMessage}
                     </Button>
                   </form>
                 </div>
@@ -531,17 +596,14 @@ export default function TravelTownLanding() {
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-4">
               <h3 className="text-xl font-bold">Travel Town</h3>
-              <p className="text-gray-400">
-                2010-yildan beri sayohat orzularingizni haqiqatga aylantiramiz.
-                Sayohatingiz biz bilan boshlanadi.
-              </p>
+              <p className="text-gray-400">{t.footerAbout}</p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Quick Links</h3>
+              <h3 className="text-lg font-semibold">{t.quickLinks}</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
-                    Bosh sahifa
+                    {t.home}
                   </Link>
                 </li>
                 <li>
@@ -549,7 +611,7 @@ export default function TravelTownLanding() {
                     href="#about"
                     className="text-gray-400 hover:text-white"
                   >
-                    Biz haqimizda
+                    {t.about}
                   </Link>
                 </li>
                 <li>
@@ -557,7 +619,7 @@ export default function TravelTownLanding() {
                     href="#packages"
                     className="text-gray-400 hover:text-white"
                   >
-                    Paketlar
+                    {t.packages}
                   </Link>
                 </li>
                 {/* <li>
@@ -565,21 +627,28 @@ export default function TravelTownLanding() {
                     href="#gallery"
                     className="text-gray-400 hover:text-white"
                   >
-                    Gallery
+                    {t.gallery}
                   </Link>
                 </li> */}
+                <li>
+                  <Link href="#faq" className="text-gray-400 hover:text-white">
+                    {t.faq}
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="#contact"
                     className="text-gray-400 hover:text-white"
                   >
-                    Boglanish
+                    {t.contact}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Mashhur manzillar</h3>
+              <h3 className="text-lg font-semibold">
+                {t.popularDestinationsFooter}
+              </h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
@@ -588,32 +657,29 @@ export default function TravelTownLanding() {
                 </li>
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
-                    Paris, France
+                    Phuket, Tailand
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
-                    Santorini, Greece
+                    Istanbul, Turkey
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white">
-                    Tokyo, Japan
+                    Madinat Jumeirah, Dubai
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Yangiliklar byulleteni</h3>
-              <p className="text-gray-400">
-                Maxsus takliflar va sayohat bo'yicha maslahatlar olish uchun
-                obuna bo'ling.
-              </p>
+              <h3 className="text-lg font-semibold">{t.newsletter}</h3>
+              <p className="text-gray-400">{t.subscribeText}</p>
             </div>
           </div>
           <div className="mt-8 border-t border-gray-800 pt-8 text-center text-gray-400">
             <p>
-              © {new Date().getFullYear()} Travel Town. All rights reserved.
+              © {new Date().getFullYear()} Travel Town. {t.allRightsReserved}
             </p>
           </div>
         </div>

@@ -2,54 +2,59 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star, MapPin } from "lucide-react";
 import img1 from "./public/images.jpg";
-import img2 from "./public/99.jpg";
-import img3 from "./public/images3.webp";
-import img4 from "./public/360_F_304881889_yJ1S3butl9gVs0kMptYTU2N1EVmEJbz8.jpg";
-import img5 from "./public/Karma-Beach-Club_Karma-Beach-Bali-.webp";
-import img6 from "./public/qMKcVJ_1547347533_Kyoto-Gardens.jpg";
-import img7 from "./public/bsr-travel-hero..jpg";
+import img2 from "./public/tailnad.jpg";
+import img3 from "./public/bali.jpg";
+import img4 from "./public/turkey.jpg";
+import img5 from "./public/duba2.jpg";
+import img6 from "./public/tailda2.jpg";
+import img7 from "./public/dubai1.webp";
+
+import { useLanguage } from "./contexts/language-context";
+import { getTranslation } from "./translations";
 
 export default function DestinationCardsSection() {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
   const destinations = [
     {
       id: 1,
-      name: "Alpine Lake",
-      location: "Switzerland",
+      name: "Palm Jumeirah",
+      location: "Dubai",
       image: img7,
       rating: 4.5,
     },
     {
       id: 2,
-      name: "Li River",
-      location: "China",
+      name: "Phuket",
+      location: "Thailand",
       image: img2,
       rating: 4.5,
     },
     {
       id: 3,
-      name: "Fjord Adventure",
-      location: "Norway",
+      name: "Bali",
+      location: "Indonesia",
       image: img3,
       rating: 4.5,
     },
     {
       id: 4,
-      name: "Santorini Island",
-      location: "Greece",
+      name: "Istanbul",
+      location: "Turkey",
       image: img4,
       rating: 4.8,
     },
     {
       id: 5,
-      name: "Bali Beaches",
-      location: "Indonesia",
+      name: "Madinat Jumeirah",
+      location: "Dubai",
       image: img5,
       rating: 4.7,
     },
     {
       id: 6,
-      name: "Kyoto Gardens",
-      location: "Japan",
+      name: "Bangkok",
+      location: "Thailand",
       image: img6,
       rating: 4.6,
     },
@@ -60,11 +65,10 @@ export default function DestinationCardsSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Mashhur manzillar
+            {t.popularDestinationsFooter}
           </h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Butun dunyo bo'ylab sayohatchilar tomonidan sevilgan eng mashhur
-            manzillarimizni kashf eting.
+            {t.exploreDestinations}
           </p>
         </div>
 
@@ -113,7 +117,7 @@ export default function DestinationCardsSection() {
             href="#"
             className="inline-flex h-10 items-center justify-center rounded-md bg-cyan-500 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-cyan-600 focus-visible:outline-none focus-visible:ring-1"
           >
-            View All Destinations
+            {t.viewAllDestinations}
           </Link>
         </div>
       </div>
