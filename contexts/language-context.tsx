@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react";
 
-export type LanguageCode = "en" | "uz" | "ru";
+export type LanguageCode = "uz" | "en" | "ru";
 
 interface LanguageContextType {
   language: LanguageCode;
@@ -20,12 +20,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<LanguageCode>("en");
+  const [language, setLanguage] = useState<LanguageCode>("uz");
 
   useEffect(() => {
     // Load saved language on mount
     const savedLanguage = localStorage.getItem("language") as LanguageCode;
-    if (savedLanguage && ["en", "uz", "ru"].includes(savedLanguage)) {
+    if (savedLanguage && ["uz", "en", "ru"].includes(savedLanguage)) {
       setLanguage(savedLanguage);
     }
   }, []);
