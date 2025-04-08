@@ -39,8 +39,8 @@ import img4 from "./public/turkey5.jpg";
 import logo from "./public/logo.png";
 import img5 from "./public/dubai3.webp";
 
-const BOT_TOKEN = "7424974828:AAEOy8CEJwLaJ3XQYxYtLk9UXmVHbvpwZhg";
-const CHAT_ID = "-4267196528";
+const BOT_TOKEN = "7599871236:AAHEmAJGbaKfayGP9h6zlVTXgeBqhtQW8jQ ";
+const CHAT_ID = "1744099835";
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxAkwoaxzTvnCTNGLnhtvyyvYnnjXSOtLGfKup2FJF_px0QCruqikzA5TRAtgSBaqk8aw/exec";
@@ -635,8 +635,9 @@ export default function TravelTownLanding() {
                         placeholder="+99899000000"
                         value={formData.phone}
                         onChange={handleChange}
-                        name="subject"
+                        name="phone"
                         required
+                        type="tel"
                       />
                     </div>
                     <div className="space-y-2">
