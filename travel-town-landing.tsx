@@ -39,8 +39,8 @@ import img4 from "./public/turkey5.jpg";
 import logo from "./public/logo.png";
 import img5 from "./public/dubai3.webp";
 
-const BOT_TOKEN = "7599871236:AAHEmAJGbaKfayGP9h6zlVTXgeBqhtQW8jQ ";
-const CHAT_ID = "1744099835";
+const BOT_TOKEN = "7599871236:AAHEmAJGbaKfayGP9h6zlVTXgeBqhtQW8jQ";
+const CHAT_ID = "-1002685767568";
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxAkwoaxzTvnCTNGLnhtvyyvYnnjXSOtLGfKup2FJF_px0QCruqikzA5TRAtgSBaqk8aw/exec";

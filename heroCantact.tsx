@@ -8,8 +8,8 @@ import { getTranslation } from "./translations";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const BOT_TOKEN = "7599871236:AAHEmAJGbaKfayGP9h6zlVTXgeBqhtQW8jQ ";
-const CHAT_ID = "1744099835";
+const BOT_TOKEN = "7599871236:AAHEmAJGbaKfayGP9h6zlVTXgeBqhtQW8jQ";
+const CHAT_ID = "-1002685767568";
 
 const HeroCantact = () => {
   const { language } = useLanguage();
