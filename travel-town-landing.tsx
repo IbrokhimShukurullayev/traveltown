@@ -193,7 +193,16 @@ export default function TravelTownLanding() {
           </nav>
           <div className="flex items-center gap-4">
             <LanguageSelector />
-            <Button className="hidden md:flex">{t.bookNow}</Button>
+            <Button
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="hidden  md:flex"
+            >
+              {t.bookNow}
+            </Button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
@@ -238,7 +247,7 @@ export default function TravelTownLanding() {
                   >
                     {t.contact}
                   </Link>
-                  <Button>Hozir buyurtma bering</Button>
+                  <Button>{t.bookNow}</Button>
                   <LanguageSelector />
                 </nav>
               </SheetContent>
@@ -398,7 +407,16 @@ export default function TravelTownLanding() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Hozir buyurtma bering</Button>
+                  <Button
+                    onClick={() =>
+                      document
+                        .getElementById("contact")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="w-full"
+                  >
+                    Hozir buyurtma bering
+                  </Button>
                 </CardFooter>
               </Card>
               <Card>
@@ -452,57 +470,6 @@ export default function TravelTownLanding() {
                   <Button className="w-full">Hozir buyurtma bering</Button>
                 </CardFooter>
               </Card>
-              {/* <Card>
-                <CardHeader>
-                  <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
-                    <Image
-                      src={img4}
-                      alt="City exploration"
-                      fill
-                      className="object-cover transition-transform hover:scale-105"
-                    />
-                  </div>
-                  <CardTitle className="mt-4">Turkey</CardTitle>
-                  <CardDescription>
-                    Tarix va madaniyatga sho'ng'ish
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="mr-2">✓</span>
-                      <span>Aviachiptalar</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">✓</span>
-                      <span>Tibbiy sug'urta</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">✓</span>
-                      <span>Shinam otel</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">✓</span>
-                      <span>Nonushta</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">✓</span>
-                      <span>Tayyor programma</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">✓</span>
-                      <span>24/7 aloqa</span>
-                    </li>
-                  </ul>
-                  <div className="mt-4 text-2xl font-bold">$420</div>
-                  <div className="text-sm text-gray-500">
-                    Har bir kishi uchun
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full">Hozir buyurtma bering</Button>
-                </CardFooter>
-              </Card> */}
             </div>
           </div>
         </section>
@@ -529,7 +496,7 @@ export default function TravelTownLanding() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>+998 99 292-11-11</span>
+                    <a href="tel:+998992466677">+998 99 246-66-77</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />

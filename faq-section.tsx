@@ -62,7 +62,7 @@ export default function FAQSection() {
       badge: "Got Questions?",
       stillHaveQuestions: "Still have questions? We're here to help!",
       contactUs: "Contact Us",
-      callUs: "Call Us: +998992921111",
+      callUs: "Call Us: +998992466677",
       questions: [
         {
           question: "How do I book a travel package?",
@@ -124,7 +124,7 @@ export default function FAQSection() {
       stillHaveQuestions:
         "Hali ham savollaringiz bormi? Biz yordam berishga tayyormiz!",
       contactUs: "Biz bilan bog'laning",
-      callUs: "Qo'ng'iroq qiling: +998992921111",
+      callUs: "Qo'ng'iroq qiling: +998992466677",
       questions: [
         {
           question: "Sayohat paketini qanday bron qilaman?",
@@ -186,7 +186,7 @@ export default function FAQSection() {
       badge: "Есть вопросы?",
       stillHaveQuestions: "Остались вопросы? Мы здесь, чтобы помочь!",
       contactUs: "Свяжитесь с нами",
-      callUs: "Позвоните нам: +998992921111",
+      callUs: "Позвоните нам: +998992466677",
       questions: [
         {
           question: "Как забронировать туристический пакет?",
@@ -285,7 +285,7 @@ export default function FAQSection() {
               {content.contactUs}
             </a>
             <a
-              href="tel:+998992921111"
+              href="tel:+998992466677"
               className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             >
               {content.callUs}
