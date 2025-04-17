@@ -102,6 +102,7 @@ const HeroCantact = () => {
               <Input
                 placeholder={t.yourDestination}
                 value={form.destination}
+                name="destination"
                 onChange={handleChange}
                 className="w-full"
                 required
@@ -113,6 +114,7 @@ const HeroCantact = () => {
               </label>
               <select
                 value={form.people}
+                name="people"
                 onChange={handleChange}
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               >
@@ -130,6 +132,7 @@ const HeroCantact = () => {
               <select
                 value={form.country}
                 onChange={handleChange}
+                name="country"
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 <option value="maldives">Dubay</option>
@@ -144,6 +147,7 @@ const HeroCantact = () => {
               </label>
               <Input
                 value={form.phone}
+                name="phone"
                 onChange={handleChange}
                 type="tel"
                 placeholder="+99899000000"
